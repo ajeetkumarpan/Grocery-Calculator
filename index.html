@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Panbrothers Grocery Calculator</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="app">
+    <div class="sidebar">
+      <h2>🛠 Settings</h2>
+      <select id="productSelect">
+        <!-- Dynamic dropdown -->
+      </select>
+      <input type="text" id="newProduct" placeholder="नया प्रोडक्ट नाम">
+      <input type="number" id="newPrice" placeholder="Price (₹/kg)">
+      <button onclick="addProduct()">Add Product</button>
+      <button onclick="removeProduct()">Remove Product</button>
+      <button onclick="updateProduct()">Update Price</button>
+    </div>
+
+    <div class="calculator">
+      <h1>🧮 Grocery Calculator</h1>
+      <label>Product:</label>
+      <select id="selectedProduct"></select>
+
+      <label>Quantity (in grams):</label>
+      <input type="number" id="quantity" placeholder="100" />
+
+      <button onclick="calculatePrice()">Calculate Price</button>
+      <div id="priceResult"></div>
+
+      <label>Or Enter Paid Amount (₹):</label>
+      <input type="number" id="paidAmount" placeholder="10" />
+      <button onclick="calculateQuantity()">Calculate Quantity</button>
+      <div id="quantityResult"></div>
+
+      <button id="refreshBtn" onclick="refreshCalculator()">🔁 Refresh</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
